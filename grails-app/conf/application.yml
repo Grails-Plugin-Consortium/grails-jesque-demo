@@ -10,11 +10,15 @@ grails:
         schedulerThreadActive: true
         delayedJobThreadActive: true
         startPaused: false
-    workers:
-        DemoJesqueJobPool:
-            queueNames: DemoJesqueJobQueue
-            jobTypes:
-                  DemoJesqueJob: DemoJesqueJob
+        workers:
+            DemoJesqueJobPool:
+                queueNames: DemoJesqueJobQueue
+                jobTypes:
+                    DemoJesqueJob: org.grails.jesque.demo.DemoJesqueJob
+            DemoTwoJesqueJobPool:
+                queueNames: DemoTwoJesqueJobQueue
+                jobTypes:
+                    DemoTwoJesqueJob: org.grails.jesque.demo.DemoTwoJesqueJob
 
 environments:
     test:

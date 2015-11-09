@@ -3,14 +3,14 @@ package org.grails.jesque.demo
 import groovy.util.logging.Slf4j
 
 @Slf4j
-class DemoJesqueJob implements Runnable {
+class DemoTwoJesqueJob implements Runnable {
 
     static triggers = {
-        cron name: 'DemoJesqueJobTrigger', cronExpression: '0/15 * * * * ? *'
+        cron name: 'DemoTwoJesqueJobTrigger', cronExpression: '0/10 * * * * ? *'
     }
 
     def perform() {
-        println "Executing Job"
+        println "Executing Two Job"
     }
 
     @Override
