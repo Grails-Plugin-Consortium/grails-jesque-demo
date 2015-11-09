@@ -3,7 +3,10 @@ package org.grails.jesque.demo
 import groovy.util.logging.Slf4j
 
 @Slf4j
-class DemoTwoJesqueJob implements Runnable {
+class DemoTwoJesqueJob {
+
+    static queue = 'DemoJesqueJobQueue'
+    static workerPool = 'DemoJesqueJobPool'
 
     static triggers = {
         cron name: 'DemoTwoJesqueJobTrigger', cronExpression: '0/10 * * * * ? *'
@@ -11,10 +14,5 @@ class DemoTwoJesqueJob implements Runnable {
 
     def perform() {
         println "Executing Two Job"
-    }
-
-    @Override
-    void run() {
-        perform()
     }
 }

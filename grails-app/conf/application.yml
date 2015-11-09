@@ -14,11 +14,12 @@ grails:
             DemoJesqueJobPool:
                 queueNames: DemoJesqueJobQueue
                 jobTypes:
-                    DemoJesqueJob: org.grails.jesque.demo.DemoJesqueJob
-            DemoTwoJesqueJobPool:
-                queueNames: DemoTwoJesqueJobQueue
-                jobTypes:
-                    DemoTwoJesqueJob: org.grails.jesque.demo.DemoTwoJesqueJob
+                    - org.grails.jesque.demo.DemoJesqueJob
+                    - org.grails.jesque.demo.DemoTwoJesqueJob
+#            DemoTwoJesqueJobPool:
+#                queueNames: DemoTwoJesqueJobQueue
+#                jobTypes:
+#
 
 environments:
     test:
