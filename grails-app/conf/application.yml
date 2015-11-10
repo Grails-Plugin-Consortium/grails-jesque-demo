@@ -16,10 +16,6 @@ grails:
                 jobTypes:
                     - org.grails.jesque.demo.DemoJesqueJob
                     - org.grails.jesque.demo.DemoTwoJesqueJob
-#            DemoTwoJesqueJobPool:
-#                queueNames: DemoTwoJesqueJobQueue
-#                jobTypes:
-#
 
 environments:
     test:
