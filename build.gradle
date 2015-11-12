@@ -63,7 +63,7 @@ dependencies {
     compile "org.hibernate:hibernate-ehcache"
     compile "org.grails.plugins:scaffolding"
 
-    compile "org.grails.plugins:grails-jesque:1.0.0-SNAPSHOT"
+    compile "org.grails.plugins:grails-jesque:1.0.2"
 
     runtime "org.grails.plugins:asset-pipeline"
 

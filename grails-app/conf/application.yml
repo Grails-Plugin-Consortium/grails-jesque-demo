@@ -12,10 +12,13 @@ grails:
         startPaused: false
         workers:
             DemoJesqueJobPool:
-                queueNames: DemoJesqueJobQueue
+                queueNames:
+                    - DemoJesqueJobQueue
+                    - JobWithNoQueueJobQueue
                 jobTypes:
                     - org.grails.jesque.demo.DemoJesqueJob
                     - org.grails.jesque.demo.DemoTwoJesqueJob
+                    - org.grails.jesque.demo.JobWithNoQueueJob
 
 environments:
     test:
