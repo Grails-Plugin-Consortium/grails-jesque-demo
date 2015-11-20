@@ -9,10 +9,10 @@ class DemoJesqueJob {
     static workerPool = 'DemoJesqueJobPool'
 
     static triggers = {
-        cron name: 'DemoJesqueJobTrigger', cronExpression: '0/15 * * * * ? *'
+        cron name: 'DemoJesqueJobTrigger', cronExpression: '*/5 * * * * ? *'
     }
 
     def perform() {
-        println "Executing Job"
+        log.info ">>>>> Executing Job"
     }
 }
