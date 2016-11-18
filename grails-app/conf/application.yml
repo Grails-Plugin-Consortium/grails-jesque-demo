@@ -3,6 +3,9 @@ grails:
     redis:
         port: 6379
         host: localhost
+        poolConfig:
+            testWhileIdle: true
+            maxTotal: 500
     jesque:
         enabled: true
         pruneWorkersOnStartup: true
